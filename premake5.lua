@@ -1,6 +1,7 @@
 -- premake5.lua
 workspace "VolumetricCloud"
    configurations { "Debug", "Release" }
+   systemversion "latest"
 
 project "VolumetricCloud"
     location "%{prj.name}"
@@ -9,10 +10,14 @@ project "VolumetricCloud"
     targetdir "bin/%{prj.name}/%{cfg.buildcfg}"
     objdir "bin/int/%{prj.name}/%{cfg.buildcfg}"
 
-    includedirs { "%{prj.location}/src" }
+    includedirs { 
+        "%{prj.location}/src",
+        "include/glm",
+        "include/stb"
+    }
     files {
-        "%{prj.location}/**.h", 
-        "%{prj.location}/**.cpp"
+        "%{prj.location}/src/**.h", 
+        "%{prj.location}/src/**.cpp"
     }
 
     filter "configurations:Debug"
@@ -30,7 +35,11 @@ project "MapGenerator"
     targetdir "bin/%{prj.name}/%{cfg.buildcfg}"
     objdir "bin/int/%{prj.name}/%{cfg.buildcfg}"
 
-    includedirs { "%{prj.location}/src" }
+    includedirs { 
+        "%{prj.location}/src",
+        "include/glm",
+        "include/stb"
+    }
     files { 
         "%{prj.location}/**.h", 
         "%{prj.location}/**.hpp", 

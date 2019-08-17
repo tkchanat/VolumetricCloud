@@ -10,8 +10,8 @@ Usage: MapGenerator.exe [OPTIONS]
 
 Options:
   -h,--help                   Print this help message and exit
-  -p UINT                     Generate a Perlin noise
-  -w UINT                     Generate a Worley noise
-  -o TEXT REQUIRED            Output destination
+  -t,--type TEXT REQUIRED     Type of noise (Perlin / Worley)
+  -o,--output TEXT REQUIRED   Output destination
+
 
 ```
