@@ -14,8 +14,7 @@ project "VolumetricCloud"
 
     includedirs { 
         "%{prj.location}/src",
-        "include/glm",
-        "include/stb"
+        "include"
     }
     files {
         "%{prj.location}/src/**.h", 
@@ -39,8 +38,7 @@ project "MapGenerator"
 
     includedirs { 
         "%{prj.location}/src",
-        "include/glm",
-        "include/stb"
+        "include"
     }
     files { 
         "%{prj.location}/src/**.h", 
