@@ -9,6 +9,8 @@ project "VolumetricCloud"
     language "C++"
     targetdir "bin/%{prj.name}/%{cfg.buildcfg}"
     objdir "bin/int/%{prj.name}/%{cfg.buildcfg}"
+    debugdir "bin/%{prj.name}/%{cfg.buildcfg}"
+    
 
     includedirs { 
         "%{prj.location}/src",
@@ -41,9 +43,9 @@ project "MapGenerator"
         "include/stb"
     }
     files { 
-        "%{prj.location}/**.h", 
-        "%{prj.location}/**.hpp", 
-        "%{prj.location}/**.cpp" 
+        "%{prj.location}/src/**.h", 
+        "%{prj.location}/src/**.hpp", 
+        "%{prj.location}/src/**.cpp" 
     }
 
     filter "configurations:Debug"

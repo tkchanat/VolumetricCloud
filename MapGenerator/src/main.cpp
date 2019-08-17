@@ -1,7 +1,7 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include <iostream>
-#include "CLI11.hpp"
-#include "stb_image_write.h"
+#include <stb_image_write.h>
+#include "CLI11.hpp" 
 #include "PerlinNoise.h"
 
 void GeneratePerlin(char const* filename)
